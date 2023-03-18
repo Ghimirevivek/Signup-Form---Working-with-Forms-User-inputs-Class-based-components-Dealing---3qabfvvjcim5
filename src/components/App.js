@@ -2,7 +2,6 @@ import React, { Component, useState } from 'react'
 import '../styles/App.css'
 
 const App = () => {
-  //try
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [gender, setGender] = useState('male')
