@@ -12,6 +12,8 @@ const App = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault()
+    setSuccess('')
+    setError('')
     if (!name || !email || !gender || !phoneNumber || !password) {
       setError('All fields are mandatory')
       return
@@ -64,6 +66,13 @@ const App = () => {
           <option value="female">Female</option>
           <option value="others">Others</option>
         </select>
+        <input
+          type="text"
+          placeholder="Phone Number"
+          data-testid="phoneNumber"
+          value={phoneNumber}
+          onChange={(e) => setPhoneNumber(e.target.value)}
+        />
         <input
           type="password"
           placeholder="Password"
